@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<section id="photos">
+{% for id, name,price, width, height in paintings %}
+<div class="box">
+	<a href="{{ url_for('painting', painting_id=id) }}">
+	
+		<img class="hover" src="static/p{{ id }}.jpg">
+		<p class="name"> {{ name }} </p>
+	
+	</a>
+</div>
+{% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+<div class="img_page">
+	<img class="spec_img" src="{{url_for('static', filename='p' + painting + '.jpg')}}">
+</div>
+
+
+<div class="description"> 
+	<p class="painting_name"> {{ name }} </p>
+
+	<lu>
+		<li>Price : {{ price }} $</li>
+		<li>Height : {{ height }}m</li>
+		<li>Width : {{ width }}m</li>
+		
+	</lu>
+</div>
+
+{% endblock %}
